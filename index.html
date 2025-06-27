@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Chaurasiya Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="logo">Harsh Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Hi There, I'm <span class="orange">Harsh Chaurasiya</span></h1>
+  <p>I am a <span class="highlight" style="font-size: 2rem;">Web Developer!</span></p>
+      <div class="socials">
+        <a href="https://x.com/HarshChaur69777"><img src="x.jpg" alt="X" /></a>
+        <a href="#"><img src="telegram.jpg" alt="Telegram" /></a>
+        <a href="https://www.instagram.com/unfiltered_by_harssh_/?hl=en"><img src="instagram.jpg" alt="Instagram" /></a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="hc.pjg.jpg" alt="Harsh Chaurasiya" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Harsh Chaurasiya, a passionate Web Developer who loves crafting dynamic and responsive websites using HTML, CSS, and JavaScript. I'm currently pursuing 12th in commerce, but I spend my free time developing and designing projects, learning new frameworks, and staying updated with the tech world.
+    </p>
+  </section>
+
+  <!--skills section-->
+ <section class="skills" id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    
+    <div class="skill-card">
+      <img src="png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail-removebg-preview.png" alt="HTML" />
+      <div class="skill-info">
+        <span>HTML</span>
+        <span class="percentage">95%</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <img src="css-removebg-preview.png" alt="CSS" />
+      <div class="skill-info">
+        <span>CSS</span>
+        <span class="percentage">90%</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <img src="js-removebg-preview.png" alt="JavaScript" />
+      <div class="skill-info">
+        <span>JavaScript</span>
+        <span class="percentage">80%</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <img src="video.png" alt="Video Editing" />
+      <div class="skill-info">
+        <span>Video Editing</span>
+        <span class="percentage">85%</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <!-- Education Section -->
+  <section class="education" id="education">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>Class 12<sup>th</sup> – Commerce Stream</h3>
+      <p>Pursuing Class 12 with a focus on accountancy, business studies, and economics. Deeply passionate about technology and web development.</p>
+      <span class="edu-year">2025–2026</span>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+
+    <div class="contact-info">
+      <h3>Reach Me At</h3>
+      <p><strong>Location:</strong> banda, uttar Pradesh, India</p>
+      <p><strong>Phone:</strong> <a href="tel:7987051443">7987051443</a>, <a href="tel:9793742189">9793742189</a></p>
+      <p><strong>Email:</strong> harshchaurasiya2008@email.com</p>
+    </div>
+  </div>
+</section>
+
+  <footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-section">
+      <h3>Harsh Portfolio</h3>
+      <p>Creative web solutions built with passion. Explore and connect with me.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Me</h4>
+      <div class="social-icons">
+        <a href="#"><img src="telegram.jpg" alt="Telegram" /></a>
+        <a href="#"><img src="instagram.jpg" alt="Instagram" /></a>
+        <a href="#"><img src="x.jpg" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Harsh Chaurasiya. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script>
+    const words = ["Web Developer!", "Video Editor!", "Frontend Designer!"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    const highlight = document.querySelector(".highlight");
+
+    function type() {
+      if (i < words.length) {
+        current = words[i];
+        if (!isDeleting) {
+          j++;
+          highlight.textContent = current.substring(0, j);
+          if (j === current.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
+          }
+        } else {
+          j--;
+          highlight.textContent = current.substring(0, j);
+          if (j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+          }
+        }
+        setTimeout(type, isDeleting ? 50 : 100);
+      }
+    }
+    type();
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // Reveal on scroll
+    const sections = document.querySelectorAll("section");
+    const reveal = () => {
+      sections.forEach(sec => {
+        const pos = sec.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) {
+          sec.style.opacity = 1;
+          sec.style.transform = "translateY(0)";
+        }
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", () => {
+      sections.forEach(sec => {
+        sec.style.opacity = 0;
+        sec.style.transition = "0.8s ease";
+        sec.style.transform = "translateY(40px)";
+      });
+      reveal();
+    });
+
+    // Tilt Effect
+    const heroContainer = document.querySelector(".hero-img");
+    const heroImage = heroContainer.querySelector("img");
+
+    heroContainer.addEventListener("mousemove", e => {
+      const { offsetX, offsetY } = e;
+      const { offsetWidth, offsetHeight } = heroContainer;
+      const x = ((offsetX / offsetWidth) - 0.5) * 20;
+      const y = ((offsetY / offsetHeight) - 0.5) * 20;
+      heroImage.style.transform = `rotateX(${-y}deg) rotateY(${x}deg) scale(1.05)`;
+    });
+
+    heroContainer.addEventListener("mouseleave", () => {
+      heroImage.style.transform = "rotateX(0) rotateY(0) sale(1)";
+    });
+
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
